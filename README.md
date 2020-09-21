@@ -29,7 +29,10 @@ Complete initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Req
 
 ### Mars Facts
 
-* Scraped the Mars Facts webpage [here](https://space-facts.com/mars/) and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc. Use Pandas to convert the data to a HTML table string.
+* Scraped the Mars Facts webpage [here](https://space-facts.com/mars/) and used Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc. Use Pandas to convert the data to a HTML table string.
+I built a mars Dataframe for quick reference.
+
+![Inspect Image](Images/Mars DataFrame.png)
 
 ### Mars Hemispheres
 

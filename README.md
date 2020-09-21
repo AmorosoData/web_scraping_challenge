@@ -3,9 +3,7 @@
 
 ![mission_to_mars](Images/mission_to_mars.png)
 For the Web Scraping Homeworking I built a web application that scrapes websites for data associated 
-with to
-#### Mission to Mars #### 
-which displays the information in a single HTML page. This outline descibes what I did. 
+with to **Mission to Mars** which displays the information in a single HTML page. This outline descibes what I did. 
 
 ## Step 1 - Scraping
 

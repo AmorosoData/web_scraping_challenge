@@ -27,7 +27,7 @@ Complete initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Req
 *featured_img = featured_img.find("a")["data-fancybox-href"]*
 ![Inspect Image](Images/JPL_Pic.png)
 
-### Mars Facts
+### Mars Facts ### 
 
 * Scraped the Mars Facts webpage [here](https://space-facts.com/mars/) and used Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc. Use Pandas to convert the data to a HTML table string.
 I built a mars Dataframe for quick reference.

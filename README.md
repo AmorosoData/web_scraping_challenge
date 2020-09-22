@@ -36,7 +36,7 @@ I built a mars Dataframe for quick reference.
 
 ### Mars Hemispheres
 
-* Visit the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mar's hemispheres.
+* Scraped the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mars's hemispheres.
 
 * You will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
 

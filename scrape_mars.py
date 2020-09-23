@@ -4,4 +4,7 @@ from bs4 import BeautifulSoup as bs
 import time
 import pandas as pd
 
-app = scrape(__name__)
+def init_browser():
+    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
+    return Browser("chrome", **executable_path, headless=False)
+

@@ -1,11 +1,7 @@
 # Importing dependencies
-from bs4 import BeautifulSoup
 from splinter import Browser
-from pprint import pprint
-import pymongo
-import pandas as pd
-import requests
-from flask import Flask, render_template
+from bs4 import BeautifulSoup as bs
 import time
-import numpy as np
-import json
+import pandas as pd
+
+app = scrape(__name__)

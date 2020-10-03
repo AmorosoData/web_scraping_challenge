@@ -59,24 +59,24 @@ def scrape_hemispheres():
     html = browser.html
     soup = bs(html, 'html.parser')
  
-  
 
 
 
 
 
 
-    # Store data in a dictionary
-    mars_data = {
-        "news_title": news_title,
-        "news_paragraph": news_p,
-        "featured_image": featured_img,
-        "mars_facts": mars_table,
-        "hemispheres": hemisphere_image_urls
-        }
 
-    # Close the browser after scraping
-    browser.quit()
+    # # Store data in a dictionary
+    # mars_data = {
+    #     "news_title": news_title,
+    #     "news_paragraph": news_p,
+    #     "featured_image": featured_img,
+    #     "mars_facts": mars_table,
+    #     "hemispheres": hemisphere_image_urls
+    #     }
 
-    # Return results
-    return mars_data
+    # # Close the browser after scraping
+    # browser.quit()
+
+    # # Return results
+    # return mars_data

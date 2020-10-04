@@ -18,8 +18,12 @@ def scrape_mars_news():
     news_title = soup.find("li", class_="slide").find("div", class_="content_title").text
     # Get the corresponding paragraph text
     news_p = soup.find("li", class_="slide").find("div", class_="article_teaser_body").text
-    return news_title
-    return news_p
+    # Build dictionary for title and paragraph
+    mars_info = {
+            'news_title': news_title,
+            'news_paragraph': news_p
+        }
+    return mars_info
 
 def scrape_mars_img():
     # --- Visit JPL site for featured Mars image ---
@@ -42,8 +46,8 @@ def scrape_mars_img():
 
 def scrape_mars_table():
     # --- Use Pandas to scrape Mars Space Facts ---
-    mars_facts_url = pd.read_html("https://space-facts.com/mars/")
-    mars_table = pd.read_html(mars_facts_url)
+    facts_url = pd.read_html("https://space-facts.com/mars/")
+    mars_table = pd.read_html(facts_url)
     # mars_table= table[0]
 
     # mars_table.columns = ["Facts", "Measure"]
@@ -80,7 +84,7 @@ def scrape_hemispheres():
             "img_url":img,"title": title
         }
         hemisphere_list.append(hemisphere_dict)
-        print(hemisphere_list)
+        return hemisphere_list
 
 scrape_hemispheres()
 browser.quit()

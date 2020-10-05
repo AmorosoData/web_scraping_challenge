@@ -22,9 +22,8 @@ Complete initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Req
 
 * Used splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`.
 
-*featured_img = soup.find("footer")*
+![Sample Code](Images/sample_code_img.png)
 
-*featured_img = featured_img.find("a")["data-fancybox-href"]*
 ![Inspect Image](Images/Featured_img.jpg)
 
 ### Mars Facts

@@ -25,7 +25,7 @@ Complete initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Req
 *featured_img = soup.find("footer")*
 
 *featured_img = featured_img.find("a")["data-fancybox-href"]*
-![Inspect Image](Images/JPL_Pic.png)
+![Inspect Image](Images/Featured_imp.png)
 
 ### Mars Facts
 

@@ -1,7 +1,7 @@
 # Web Scraping Homework - Mission to Mars
 :rocket: :rocket: :rocket: :rocket: :rocket: :rocket:
 
-![mission_to_mars](Images/mission_to_mars.png)
+![mission_to_mars](Missions_to_Mars/Images/mission_to_mars.png)
 For the Web Scraping Homeworking I built a web application that scrapes websites for data associated 
 with to **Mission to Mars** which displays the information in a single HTML page. This outline descibes what I did. 
 

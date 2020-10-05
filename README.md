@@ -11,6 +11,10 @@ Complete initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Req
 
 * Jupyter Notebook file called `mission_to_mars.ipynb` to complete all scraping and analysis tasks. The following outlines what was scraped.
 
+# Please Note: # 
+the path to the chromedriver is set at 
+executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
+
 ### NASA Mars News
 
 * Scraped [NASA Mars News Site](https://mars.nasa.gov/news/) collected latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
@@ -31,17 +35,14 @@ Complete initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Req
 ### Mars Facts
 
 * Scraped the Mars Facts webpage [here](https://space-facts.com/mars/) and used Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc. Use Pandas to convert the data to a HTML table string.
-I built a mars Dataframe for quick reference.
-
-![Inspect Image](Images/MarsDataFrame.png)
 
 ### Mars Hemispheres
 
 * Scraped the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mars's hemispheres.
 
-* You will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
+* clicked through each of the links to the hemispheres in order to find the image url to the full resolution image.
 
-* Save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Use a Python dictionary to store the data using the keys `img_url` and `title`.
+* Saved both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Use a Python dictionary to store the data using the keys `img_url` and `title`.
 
 * Append the dictionary with the image url string and the hemisphere title to a list. This list will contain one dictionary for each hemisphere.
 

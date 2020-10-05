@@ -11,25 +11,23 @@ browser = Browser("chrome", **executable_path, headless=False)
 def scrape_mars_news():
     browser.visit('https://mars.nasa.gov/news/')
     time.sleep(1)
-    # Scrape page into Soup
     html = browser.html
     soup = bs(html, "html.parser")
-    # Get the first news title
+
     news_title = soup.find("li", class_="slide").find("div", class_="content_title").text
-    # Get the corresponding paragraph text
     news_p = soup.find("li", class_="slide").find("div", class_="article_teaser_body").text
-    # Build dictionary for title and paragraph
+    
     mars_info = {
             'news_title': news_title,
             'news_paragraph': news_p
         }
     return mars_info
 
+# --- Visit JPL site for featured Mars image ---
 def scrape_mars_img():
-    # --- Visit JPL site for featured Mars image ---
     browser.visit('https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars')
     time.sleep(1)
-    # Click through to full image
+ 
     featured_img_button = browser.find_by_id('full_image')[0]
     featured_img_button.click()
     browser.is_element_present_by_text('more info',wait_time =2)
@@ -39,27 +37,23 @@ def scrape_mars_img():
     # Scrape page into Soup
     html = browser.html
     soup = bs(html, 'html.parser')
+
     # Search for image source
     featured_img = soup.select_one("figure.lede a img").get("src")
     featured_img_url = (f" https://www.jpl.nasa.gov{featured_img}")
     return featured_img_url
 
+# --- Use Pandas to scrape Mars Space Facts ---
 def scrape_mars_table():
-    # --- Use Pandas to scrape Mars Space Facts ---
     facts_url = pd.read_html("https://space-facts.com/mars/")
     mars_table = pd.read_html(facts_url)
-    # mars_table= table[0]
-
-    # mars_table.columns = ["Facts", "Measure"]
-    # mars_table.to_html(classes = "table table-striped")
     return mars_table
 
-    
+# --- Visit USGS Astrogeology Site ---  
 def scrape_hemispheres():
-    # --- Visit USGS Astrogeology Site ---
     browser.visit('https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars')
     time.sleep(1)
-    # Scrape page into Soup
+
     html = browser.html
     soup = bs(html, 'html.parser')
 
@@ -68,10 +62,9 @@ def scrape_hemispheres():
     # print(hemispheres)
     # print("======================")
     hemisphere_list = []
-    # title_list = []
+    title_list = []
 
     for hemisphere in hemispheres:
-      
         browser.visit(base_url+hemisphere.find("a").get("href"))
         html = browser.html
         soup = bs(html, 'html.parser')
@@ -86,6 +79,8 @@ def scrape_hemispheres():
         hemisphere_list.append(hemisphere_dict)
         return hemisphere_dict
 
+        browser.quit()
+        
 # Store data in a dictionary
 mars_data = {
     "news_title": news_title,
@@ -95,9 +90,7 @@ mars_data = {
     "hemispheres": hemisphere_dict
     }
 
-print(mars_data)
-    # Close the browser after scraping
-    # browser.quit()
+
 
     # Return results
     # return mars_data

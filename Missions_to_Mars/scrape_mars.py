@@ -65,11 +65,11 @@ def scrape_hemispheres():
 
     base_url = "https://astrogeology.usgs.gov"
     hemispheres = soup.find("div", class_ = "collapsible").find_all("div", class_="item")
-    
-    print("======================")
-    hemisphere_list = []
-    title_list = []
     # print(hemispheres)
+    # print("======================")
+    hemisphere_list = []
+    # title_list = []
+
     for hemisphere in hemispheres:
       
         browser.visit(base_url+hemisphere.find("a").get("href"))
@@ -84,23 +84,20 @@ def scrape_hemispheres():
             "img_url":img,"title": title
         }
         hemisphere_list.append(hemisphere_dict)
-        return hemisphere_list
+        return hemisphere_dict
 
-scrape_hemispheres()
-browser.quit()
+# Store data in a dictionary
+mars_data = {
+    "news_title": news_title,
+    "news_paragraph": news_p,
+    "featured_image": featured_img,
+    "mars_facts": mars_table,
+    "hemispheres": hemisphere_dict
+    }
 
-
-    # # Store data in a dictionary
-    # mars_data = {
-    #     "news_title": news_title,
-    #     "news_paragraph": news_p,
-    #     "featured_image": featured_img,
-    #     "mars_facts": mars_table,
-    #     "hemispheres": hemisphere_image_urls
-    #     }
-
-    # # Close the browser after scraping
+print(mars_data)
+    # Close the browser after scraping
     # browser.quit()
 
-    # # Return results
+    # Return results
     # return mars_data

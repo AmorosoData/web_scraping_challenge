@@ -31,11 +31,7 @@ def scrape():
     
     # news_title = soup.find("li", class_="slide").find("div", class_="content_title").text
     # news_p = soup.find("li", class_="slide").find("div", class_="article_teaser_body").text
-    
-    # mars_info = {
-    #         'news_title': news_title,
-    #         'news_paragraph': news_p
-    #     }
+
     return mars_info
 
 # # --- Visit JPL site for featured Mars image ---
